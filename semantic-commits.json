@@ -41,7 +41,6 @@
     },
     {
       "matchManagers": ["github-actions"],
-      "semanticCommitType": "chore",
       "semanticCommitScope": "ci"
     }
   ]
