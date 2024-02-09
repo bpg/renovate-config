@@ -13,7 +13,8 @@
     "github>bpg/renovate-config:generic-regex-manager.json5"
   ],
   "timezone": "America/Toronto",
-  "dependencyDashboardTitle": "Renovate Dashboard",
+  "schedule": ["before 6am on saturday"],
+  "dependencyDashboardTitle": ":robot: Renovate Dashboard",
   "suppressNotifications": ["prIgnoreNotification"],
   "commitBodyTable": true,
   "rebaseWhen": "conflicted",
