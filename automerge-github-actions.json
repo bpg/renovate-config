@@ -4,7 +4,7 @@
     {
       "matchManagers": ["github-actions"],
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "ignoreTests": true
     }
