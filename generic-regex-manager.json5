@@ -4,7 +4,10 @@
     {
       customType: "regex",
       description: "Process various dependencies in YAML files",
-      fileMatch: ["\\.ya?ml(\\.j2)?$"],
+      fileMatch: [
+        "\\.ya?ml(\\.j2)?$",
+        "(^|/)Makefile$"
+      ],
       matchStrings: [
         // Inline
         '\\S+: "?(?<currentValue>[^"\\s]+)"? # ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?',
