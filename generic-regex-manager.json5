@@ -6,9 +6,11 @@
       description: "Process various dependencies in YAML files",
       fileMatch: [
         "\\.ya?ml(\\.j2)?$",
-        "(^|/)Makefile$"
+        "^Makefile$"
       ],
       matchStrings: [
+        // Inline new style
+        ": (?<currentValue>.+) # renovate: datasource=(?<datasource>[a-z-]+) depName=(?<depName>[^\\s]+)(?: lookupName=(?<lookupName>[^\\s]+))?(?: versioning=(?<versioning>[a-z-]+))?(?: extractVersion=(?<extractVersion>[^\\s]+))?",
         // Inline
         '\\S+: "?(?<currentValue>[^"\\s]+)"? # ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?',
         // Newline
