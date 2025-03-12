@@ -5,8 +5,7 @@
       customType: "regex",
       description: "Process various dependencies in YAML files",
       fileMatch: [
-        "\\.ya?ml(\\.j2)?$",
-        "^Makefile$"
+        "\\.ya?ml(\\.j2)?$"
       ],
       matchStrings: [
         // Inline new style
@@ -22,5 +21,13 @@
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       extractVersionTemplate: "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.*)${{/if}}",
     },
+    {
+      customType: "regex",
+      description: "Process various dependencies in Makefile",
+      fileMatch: ["^Makefile$"],
+      matchStrings: [
+        "=(?<currentValue>.+)# renovate: datasource=(?<datasource>[a-z-]+) depName=(?<depName>[^\\s]+)(?: lookupName=(?<lookupName>[^\\s]+))?(?: versioning=(?<versioning>[a-z-]+))?(?: extractVersion=(?<extractVersion>[^\\s]+))?"
+      ]
+    }
   ],
 }
