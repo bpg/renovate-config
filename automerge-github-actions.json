@@ -4,8 +4,23 @@
     {
       "matchManagers": ["github-actions"],
       "automerge": true,
-      "automergeType": "pr",
-      "matchUpdateTypes": ["minor", "patch", "digest"]
+      "automergeType": "branch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "minimumReleaseAge": "3 days",
+      "ignoreTests": true
+    },
+    {
+      "description": "Automerge trusted actions sooner",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": [
+        "/^bpg-labs\//",
+        "/^actions\//"
+      ],
+      "automerge": true,
+      "automergeType": "branch",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "minimumReleaseAge": "1 minute",
+      "ignoreTests": true
     }
   ]
 }
