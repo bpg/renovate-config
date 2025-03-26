@@ -35,7 +35,7 @@
       description: "Process various dependencies in Makefile",
       fileMatch: ["^Makefile$"],
       matchStrings: [
-        '\\S+= ?"?(?<currentValue>[^"\\s]+)"? # ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?( packageName=(?<packageName>\\S+))?',     
+        '\\s?= ?"?(?<currentValue>[^"\\s]+)"?\\s?#\\s?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?( packageName=(?<packageName>\\S+))?',     
       ]
     }
   ],
