@@ -32,8 +32,8 @@
     },
     {
       customType: "regex",
-      description: "Process various dependencies in Makefile",
-      fileMatch: ["^Makefile$"],
+      description: "Process various dependencies in Makefile or Dockerfile",
+      fileMatch: ["^(Make|Docker)file$"],
       matchStrings: [
         '\\s?= ?"?(?<currentValue>[^"\\s]+)"?\\s?#\\s?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?( packageName=(?<packageName>\\S+))?',     
       ]
